@@ -1,0 +1,162 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lux Biographer</title>
+<style>
+    body {
+        font-family: 'Georgia', serif;
+        margin: 0;
+        padding: 0;
+        background-color: #fdfcf9;
+        color: #2d2d2d;
+        line-height: 1.6;
+    }
+    header {
+        background-color: #2b2b2b;
+        color: white;
+        padding: 15px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header h1 { margin: 0; font-size: 1.5em; }
+    nav a {
+        color: white;
+        margin-left: 20px;
+        text-decoration: none;
+    }
+    .lang-toggle {
+        background: none;
+        border: 1px solid white;
+        color: white;
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+    section {
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 0 20px;
+    }
+    h2 {
+        border-bottom: 2px solid #bfa980;
+        padding-bottom: 5px;
+    }
+    .hero {
+        background: url('https://via.placeholder.com/1200x400?text=Your+Hero+Image') no-repeat center/cover;
+        color: white;
+        text-align: center;
+        padding: 80px 20px;
+    }
+    .hero h1 { font-size: 2.5em; }
+    .cta {
+        background-color: #bfa980;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        margin-top: 15px;
+        font-size: 1em;
+    }
+    .pricing-table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+    .pricing-table th, .pricing-table td {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+    footer {
+        text-align: center;
+        background: #2b2b2b;
+        color: white;
+        padding: 15px;
+        font-size: 0.9em;
+    }
+</style>
+<script>
+    const content = {
+        en: {
+            about: "I am a professional biographer dedicated to turning life stories into timeless works.",
+            services: "Full-length biographies, short memoirs, and family legacy books.",
+            pricing: "Prices start from $2,000 for short memoirs.",
+            sample1: "Excerpt from biography 1...",
+            sample2: "Excerpt from biography 2...",
+            sample3: "Excerpt from biography 3..."
+        },
+        ru: {
+            about: "Я профессиональный биограф, превращающий истории жизни в вечные произведения.",
+            services: "Полноформатные биографии, короткие мемуары и семейные книги наследия.",
+            pricing: "Цены от 150 000₽ за короткие мемуары.",
+            sample1: "Отрывок из биографии 1...",
+            sample2: "Отрывок из биографии 2...",
+            sample3: "Отрывок из биографии 3..."
+        }
+    }function setLang(lang) {
+    document.getElementById('about-text').innerText = content[lang].about;
+    document.getElementById('services-text').innerText = content[lang].services;
+    document.getElementById('pricing-text').innerText = content[lang].pricing;
+    document.getElementById('sample1').innerText = content[lang].sample1;
+    document.getElementById('sample2').innerText = content[lang].sample2;
+    document.getElementById('sample3').innerText = content[lang].sample3;
+}
+ 
+</script>
+</head>
+<body onload="setLang('en')">
+    <header>
+        <h1>Lux Biographer</h1>
+        <div>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#samples">Samples</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <button class="lang-toggle" onclick="setLang('en')">EN</button>
+            <button class="lang-toggle" onclick="setLang('ru')">RU</button>
+        </div>
+    </header><section class="hero">
+    <h1>Preserving Life Stories</h1>
+    <button class="cta">Order a Biography</button>
+</section>
+ 
+<section id="about">
+    <h2>About Me</h2>
+    <p id="about-text"></p>
+</section>
+ 
+<section id="services">
+    <h2>Services</h2>
+    <p id="services-text"></p>
+</section>
+ 
+<section id="pricing">
+    <h2>Pricing</h2>
+    <p id="pricing-text"></p>
+</section>
+ 
+<section id="samples">
+    <h2>Work Samples</h2>
+    <p id="sample1"></p>
+    <p id="sample2"></p>
+    <p id="sample3"></p>
+</section>
+ 
+<section id="contact">
+    <h2>Contact</h2>
+    <form>
+        <input type="text" placeholder="Name" required><br><br>
+        <input type="email" placeholder="Email" required><br><br>
+        <textarea placeholder="Your message"></textarea><br><br>
+        <button type="submit" class="cta">Send</button>
+    </form>
+</section>
+ 
+<footer>
+    &copy; 2025 Lux Biographer. All rights reserved.
+</footer>
+ 
+</body>
+</html>
