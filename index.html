@@ -2,161 +2,132 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lux Biographer</title>
+<title>Luxury Biography Service</title>
 <style>
     body {
-        font-family: 'Georgia', serif;
         margin: 0;
-        padding: 0;
-        background-color: #fdfcf9;
-        color: #2d2d2d;
+        font-family: 'Georgia', serif;
+        background-color: #1e1b18;
+        color: #e6dcc5;
         line-height: 1.6;
     }
     header {
-        background-color: #2b2b2b;
-        color: white;
-        padding: 15px 30px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        text-align: center;
+        padding: 3rem 1rem;
+        background-color: #2a2725;
+        border-bottom: 3px solid #a67c52;
     }
-    header h1 { margin: 0; font-size: 1.5em; }
-    nav a {
-        color: white;
-        margin-left: 20px;
-        text-decoration: none;
+    header h1 {
+        font-size: 2.5rem;
+        margin: 0;
+        color: #d4b483;
     }
-    .lang-toggle {
+    header p {
+        max-width: 600px;
+        margin: 1rem auto 0;
+        font-size: 1.1rem;
+        color: #cbbfa3;
+    }
+    nav {
+        text-align: right;
+        padding: 0.5rem 1rem;
+        background-color: #1a1816;
+    }
+    nav button {
         background: none;
-        border: 1px solid white;
-        color: white;
-        padding: 5px 10px;
+        border: 1px solid #a67c52;
+        color: #a67c52;
+        padding: 0.3rem 0.6rem;
+        margin-left: 0.5rem;
         cursor: pointer;
     }
     section {
         max-width: 900px;
-        margin: 40px auto;
-        padding: 0 20px;
+        margin: auto;
+        padding: 2rem 1rem;
     }
     h2 {
-        border-bottom: 2px solid #bfa980;
-        padding-bottom: 5px;
+        color: #d4b483;
+        border-bottom: 2px solid #a67c52;
+        padding-bottom: 0.3rem;
     }
-    .hero {
-        background: url('https://via.placeholder.com/1200x400?text=Your+Hero+Image') no-repeat center/cover;
-        color: white;
-        text-align: center;
-        padding: 80px 20px;
+    .price {
+        font-size: 1.4rem;
+        color: #caa472;
+        margin-top: 1rem;
     }
-    .hero h1 { font-size: 2.5em; }
-    .cta {
-        background-color: #bfa980;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        cursor: pointer;
-        margin-top: 15px;
-        font-size: 1em;
-    }
-    .pricing-table {
-        border-collapse: collapse;
-        width: 100%;
-    }
-    .pricing-table th, .pricing-table td {
-        border: 1px solid #ddd;
-        padding: 8px;
+    .demo {
+        background-color: #2a2725;
+        padding: 1rem;
+        margin: 1rem 0;
+        border-left: 4px solid #a67c52;
     }
     footer {
         text-align: center;
-        background: #2b2b2b;
-        color: white;
-        padding: 15px;
-        font-size: 0.9em;
+        padding: 1.5rem 1rem;
+        font-size: 0.9rem;
+        background-color: #1a1816;
+        color: #a67c52;
     }
 </style>
-<script>
-    const content = {
-        en: {
-            about: "I am a professional biographer dedicated to turning life stories into timeless works.",
-            services: "Full-length biographies, short memoirs, and family legacy books.",
-            pricing: "Prices start from $2,000 for short memoirs.",
-            sample1: "Excerpt from biography 1...",
-            sample2: "Excerpt from biography 2...",
-            sample3: "Excerpt from biography 3..."
-        },
-        ru: {
-            about: "Я профессиональный биограф, превращающий истории жизни в вечные произведения.",
-            services: "Полноформатные биографии, короткие мемуары и семейные книги наследия.",
-            pricing: "Цены от 150 000₽ за короткие мемуары.",
-            sample1: "Отрывок из биографии 1...",
-            sample2: "Отрывок из биографии 2...",
-            sample3: "Отрывок из биографии 3..."
-        }
-    }function setLang(lang) {
-    document.getElementById('about-text').innerText = content[lang].about;
-    document.getElementById('services-text').innerText = content[lang].services;
-    document.getElementById('pricing-text').innerText = content[lang].pricing;
-    document.getElementById('sample1').innerText = content[lang].sample1;
-    document.getElementById('sample2').innerText = content[lang].sample2;
-    document.getElementById('sample3').innerText = content[lang].sample3;
-}
- 
-</script>
 </head>
-<body onload="setLang('en')">
-    <header>
-        <h1>Lux Biographer</h1>
-        <div>
-            <nav>
-                <a href="#about">About</a>
-                <a href="#services">Services</a>
-                <a href="#pricing">Pricing</a>
-                <a href="#samples">Samples</a>
-                <a href="#contact">Contact</a>
-            </nav>
-            <button class="lang-toggle" onclick="setLang('en')">EN</button>
-            <button class="lang-toggle" onclick="setLang('ru')">RU</button>
-        </div>
-    </header><section class="hero">
-    <h1>Preserving Life Stories</h1>
-    <button class="cta">Order a Biography</button>
-</section>
+<body><nav>
+    <button onclick="setLang('en')">EN</button>
+    <button onclick="setLang('ru')">RU</button>
+</nav><header>
+    <h1 id="title">Luxury Biography Service</h1>
+    <p id="subtitle">Preserving your family's most precious stories in timeless form.</p>
+</header><section>
+    <h2 id="intro-title">About Me</h2>
+    <p id="intro-text">I am a professional biographer dedicated to capturing life stories with elegance, depth, and historical accuracy. Each biography I create is a legacy for generations to come.</p><h2 id="service-title">Services</h2>
+<p id="service-text">Full-length biographies, memoir compilations, and special family heritage editions — tailored to your unique story.</p>
  
-<section id="about">
-    <h2>About Me</h2>
-    <p id="about-text"></p>
-</section>
+<h2 id="price-title">Pricing</h2>
+<p class="price" id="price-text">From 3000₽ per page</p>
  
-<section id="services">
-    <h2>Services</h2>
-    <p id="services-text"></p>
-</section>
+<h2 id="demo-title">Work Samples</h2>
+<div class="demo" id="demo1">Excerpt 1: A childhood memory by the seaside...</div>
+<div class="demo" id="demo2">Excerpt 2: Overcoming life’s greatest challenges...</div>
+<div class="demo" id="demo3">Excerpt 3: A love story that lasted decades...</div>
  
-<section id="pricing">
-    <h2>Pricing</h2>
-    <p id="pricing-text"></p>
-</section>
+</section><footer>
+    © 2025 Your Name — Professional Biographer
+</footer><script>
+const translations = {
+    en: {
+        title: "Luxury Biography Service",
+        subtitle: "Preserving your family's most precious stories in timeless form.",
+        "intro-title": "About Me",
+        "intro-text": "I am a professional biographer dedicated to capturing life stories with elegance, depth, and historical accuracy. Each biography I create is a legacy for generations to come.",
+        "service-title": "Services",
+        "service-text": "Full-length biographies, memoir compilations, and special family heritage editions — tailored to your unique story.",
+        "price-title": "Pricing",
+        "price-text": "From 3000₽ per page",
+        "demo-title": "Work Samples",
+        demo1: "Excerpt 1: A childhood memory by the seaside...",
+        demo2: "Excerpt 2: Overcoming life’s greatest challenges...",
+        demo3: "Excerpt 3: A love story that lasted decades..."
+    },
+    ru: {
+        title: "Премиум-биографии на заказ",
+        subtitle: "Сохраним самые дорогие истории вашей семьи в вечном виде.",
+        "intro-title": "Обо мне",
+        "intro-text": "Я профессиональный биограф, который передает жизненные истории с элегантностью, глубиной и исторической точностью. Каждая книга становится наследием для будущих поколений.",
+        "service-title": "Услуги",
+        "service-text": "Полноформатные биографии, сборники мемуаров и специальные издания о семейной истории — индивидуально для вас.",
+        "price-title": "Стоимость",
+        "price-text": "От 3000₽ за страницу",
+        "demo-title": "Примеры работ",
+        demo1: "Отрывок 1: Воспоминание о детстве у моря...",
+        demo2: "Отрывок 2: Преодоление величайших жизненных испытаний...",
+        demo3: "Отрывок 3: История любви, длившейся десятилетия..."
+    }
+};
  
-<section id="samples">
-    <h2>Work Samples</h2>
-    <p id="sample1"></p>
-    <p id="sample2"></p>
-    <p id="sample3"></p>
-</section>
- 
-<section id="contact">
-    <h2>Contact</h2>
-    <form>
-        <input type="text" placeholder="Name" required><br><br>
-        <input type="email" placeholder="Email" required><br><br>
-        <textarea placeholder="Your message"></textarea><br><br>
-        <button type="submit" class="cta">Send</button>
-    </form>
-</section>
- 
-<footer>
-    &copy; 2025 Lux Biographer. All rights reserved.
-</footer>
- 
-</body>
+function setLang(lang) {
+    Object.keys(translations[lang]).forEach(id => {
+        document.getElementById(id).textContent = translations[lang][id];
+    });
+}
+</script></body>
 </html>
