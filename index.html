@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Luxury Biographer Service</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Georgia', serif;
+    background: linear-gradient(to bottom, #f9f5ef, #ece1d1);
+    color: #2c2c2c;
+    line-height: 1.6;
+  }
+  header {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: #d4b483;
+    color: white;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+  }
+  nav {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  nav button {
+    margin: 0 0.5rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    background: #8a5a44;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  nav button:hover {
+    background: #6d4734;
+  }
+  section {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+  }
+  h2 {
+    color: #8a5a44;
+    border-bottom: 2px solid #d4b483;
+    padding-bottom: 0.5rem;
+  }
+  .price {
+    background: #f4e8d6;
+    padding: 1rem;
+    border-radius: 6px;
+    margin: 1rem 0;
+  }
+  footer {
+    text-align: center;
+    padding: 2rem;
+    background: #d4b483;
+    color: white;
+  }
+  .language-active {
+    background: #6d4734 !important;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1 id="title">Luxury Biography Writing</h1>
+  <nav>
+    <button id="en-btn" class="language-active" onclick="setLanguage('en')">English</button>
+    <button id="ru-btn" onclick="setLanguage('ru')">Русский</button>
+  </nav>
+</header>
+<section>
+  <h2 id="intro-title">About Me</h2>
+  <p id="intro-text">I craft bespoke biographies that preserve life stories in a refined, timeless form for families, executives, and public figures.</p>  
+  <h2 id="services-title">Services</h2>
+  <p id="services-text">From in-depth interviews to final printed editions, I ensure every biography is accurate, personal, and elegantly written.</p>  
+  <h2 id="price-title">Pricing</h2>
+  <div class="price" id="price-text">Starting at 60,000₽ for a complete biography project. Price varies by length and complexity.</div>  
+  <h2 id="samples-title">Sample Excerpts</h2>
+  <ul id="samples-list">
+    <li>Excerpt 1: Childhood memories brought to life with vivid detail.</li>
+    <li>Excerpt 2: Career milestones told with authenticity and depth.</li>
+    <li>Excerpt 3: Personal reflections that capture true character.</li>
+  </ul>
+</section>
+<footer>
+  <p>&copy; 2025 Luxury Biographer Service</p>
+</footer>
+<script>
+  const content = {
+    en: {
+      title: 'Luxury Biography Writing',
+      introTitle: 'About Me',
+      introText: 'I craft bespoke biographies that preserve life stories in a refined, timeless form for families, executives, and public figures.',
+      servicesTitle: 'Services',
+      servicesText: 'From in-depth interviews to final printed editions, I ensure every biography is accurate, personal, and elegantly written.',
+      priceTitle: 'Pricing',
+      priceText: 'Starting at 60,000₽ for a complete biography project. Price varies by length and complexity.',
+      samplesTitle: 'Sample Excerpts',
+      samplesList: [
+        'Excerpt 1: Childhood memories brought to life with vivid detail.',
+        'Excerpt 2: Career milestones told with authenticity and depth.',
+        'Excerpt 3: Personal reflections that capture true character.'
+      ]
+    },
+    ru: {
+      title: 'Премиальное написание биографий',
+      introTitle: 'Обо мне',
+      introText: 'Я создаю индивидуальные биографии, которые сохраняют истории жизни в изысканной и вечной форме для семей, руководителей и публичных людей.',
+      servicesTitle: 'Услуги',
+      servicesText: 'От подробных интервью до готовых печатных изданий — я гарантирую, что каждая биография будет точной, личной и элегантно написанной.',
+      priceTitle: 'Стоимость',
+      priceText: 'От 60 000₽ за полный проект биографии. Цена зависит от объема и сложности.',
+      samplesTitle: 'Примеры',
+      samplesList: [
+        'Отрывок 1: Детские воспоминания, ожившие в ярких деталях.',
+        'Отрывок 2: Этапы карьеры, рассказанные с подлинностью и глубиной.',
+        'Отрывок 3: Личные размышления, передающие истинный характер.'
+      ]
+    }
+  };
+
+  function setLanguage(lang) {
+    // Update button styles
+    document.getElementById('en-btn').classList.remove('language-active');
+    document.getElementById('ru-btn').classList.remove('language-active');
+    document.getElementById(lang + '-btn').classList.add('language-active');
+    
+    // Update content
+    document.getElementById('title').innerText = content[lang].title;
+    document.getElementById('intro-title').innerText = content[lang].introTitle;
+    document.getElementById('intro-text').innerText = content[lang].introText;
+    document.getElementById('services-title').innerText = content[lang].servicesTitle;
+    document.getElementById('services-text').innerText = content[lang].servicesText;
+    document.getElementById('price-title').innerText = content[lang].priceTitle;
+    document.getElementById('price-text').innerText = content[lang].priceText;
+    document.getElementById('samples-title').innerText = content[lang].samplesTitle;
+    
+    // Update list items
+    const list = document.getElementById('samples-list');
+    list.innerHTML = '';
+    content[lang].samplesList.forEach(item => {
+      const li = document.createElement('li');
+      li.innerText = item;
+      list.appendChild(li);
+    });
+  }
+</script>
+</body>
+</html>
