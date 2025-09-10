@@ -477,6 +477,16 @@
       order: -1;
       margin-bottom: 2rem;
     }
+    .profile-img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .profile-img:hover {
+    transform: scale(1.02);
+  }
   }
   
   @media (max-width: 768px) {
@@ -560,7 +570,7 @@
         <p>Каждая биография — это совместное путешествие, в котором я тесно сотрудничаю с вами, чтобы запечатлеть не только события вашей жизни, но и суть вашего опыта, ценностей и мудрости, которые будут храниться будущими поколениями.</p>
       </div>
       <div class="about-image">
-        <!-- Здесь будет изображение -->
+        <img src="your-image.jpg" alt="Профессиональный биограф" class="profile-img">
       </div>
     </div>
   </div>
