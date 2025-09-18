@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Биография от Натальи Новиковой</title>
+<link rel="icon" href="logo.png?v=4" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --color-cream: #f8f4ef;
+    --color-gold: #c6a972;
+    --color-dark: #1a1a1a;
+    --color-light-taupe: #e8dfd5;
+    --color-taupe: #d6cdc0;
+    --color-dark-taupe: #a8998a;
+    --section-spacing: 5rem;
+    --element-spacing: 1.5rem;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--color-cream);
+    color: var(--color-dark);
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  /* Header Styles */
+  header {
+    background: linear-gradient(to bottom, rgba(26, 26, 26, 0.9), rgba(26, 26, 26, 0.7));
+    color: white;
+    padding: 1.2rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+  }
+  
+  header.scrolled {
+    padding: 0.8rem 0;
+    background: rgba(26, 26, 26, 0.98);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--color-gold);
+    line-height: 1.2;
+  }
+  
+  .logo-image {
+    height: 1.4em; /* Relative to font size */
+    width: auto;
+    max-width: 100px;
+    object-fit: contain;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.8rem;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+    font-weight: 400;
+  }
+  
+  nav a:hover {
+    color: var(--color-gold);
+  }
+
+  /* Mobile menu button */
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+  }
+  
+  .menu-toggle span {
+    width: 30px;
+    height: 3px;
+    background: var(--color-gold);
+    border-radius: 5px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+  }
+  
+  /* Mobile navigation */
+  .mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(26, 26, 26, 0.98);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .mobile-nav.active {
+    transform: translateX(0);
+  }
+  
+  .mobile-nav ul {
+    list-style: none;
+    text-align: center;
+  }
+  
+  .mobile-nav li {
+    margin: 1.5rem 0;
+  }
+  
+  .mobile-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+    font-weight: 400;
+  }
+  
+  .mobile-nav a:hover {
+    color: var(--color-gold);
+  }
+  
+  .close-menu {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  
+  /* Hero Section */
+  .hero {
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(26, 26, 26, 0.7), rgba(26, 26, 26, 0.4)), url('https://images.unsplash.com/photo-1496715976403-7e36dc43f17b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding-top: 80px;
+  }
+  
+  .hero-content {
+    max-width: 800px;
+    padding: 0 1.5rem;
+  }
+  
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.5rem;
+    font-weight: 700; /* Changed from 300 to 700 */
+    margin-bottom: 1.5rem;
+    line-height: 1.3;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    font-weight: 400; /* Changed from 300 to 600 */
+    opacity: 1;
+  }
+  
+  .btn {
+    display: inline-block;
+    background: var(--color-gold);
+    color: white;
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+  }
+  
+  .btn:hover {
+    background: #b4985f;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+ .btn-outline {
+    background: rgba(0, 0, 0, 0.4); /* Dark semi-transparent instead of white */
+    border: 2px solid var(--color-gold);
+    color: var(--color-gold);
+    margin-left: 1rem;
+    font-weight: 600;
+}
+  
+.btn-outline:hover {
+    background: var(--color-gold);
+    color: white;
+}
+  
+  /* Section Styles */
+  section {
+    padding: var(--section-spacing) 0;
+  }
+  
+  .section-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+  }
+  
+  .section-header h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--color-dark);
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+  }
+  
+  .section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: var(--color-gold);
+  }
+  
+  /* About Section */
+  .about-content {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+  }
+  
+  .about-text {
+    flex: 1;
+  }
+  
+  .about-text p {
+    margin-bottom: 1.8rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+  
+  .about-image {
+    flex: 1;
+    height: 400px;
+    background: var(--color-taupe);
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-image::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--color-gold);
+    z-index: -1;
+    border-radius: 10px;
+  }
+  
+  .profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .profile-img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Services Section */
+  .services {
+    background: var(--color-light-taupe);
+  }
+  
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+  }
+  
+  .service-card {
+    background: white;
+    padding: 2.8rem 2.2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  }
+  
+  .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid var(--color-gold);
+  }
+  
+  .service-icon {
+    font-size: 2.8rem;
+    color: var(--color-gold);
+    margin-bottom: 1.8rem;
+  }
+  
+  .service-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+    color: var(--color-dark);
+  }
+  
+  .service-card p {
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+  }
+  
+  /* Pricing Section */
+  .pricing-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    margin-top: 1.5rem;
+  }
+  
+  .pricing-card {
+    background: white;
+    padding: 3.2rem 2.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  }
+  
+  .pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .pricing-card.featured {
+    border: 2px solid var(--color-gold);
+    transform: scale(1.03);
+  }
+  
+  .pricing-card.featured::before {
+    content: 'Самый популярный';
+    position: absolute;
+    top: 20px;
+    right: -35px;
+    background: var(--color-gold);
+    color: white;
+    padding: 0.5rem 2rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transform: rotate(45deg);
+  }
+  
+  .price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.2rem;
+    color: var(--color-gold);
+    margin: 1.8rem 0;
+    font-weight: 300;
+  }
+  
+  .pricing-features {
+    list-style: none;
+    margin: 2.2rem 0;
+    text-align: left;
+  }
+  
+  .pricing-features li {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--color-light-taupe);
+    display: flex;
+    align-items: center;
+  }
+  
+  .pricing-features li:before {
+    content: "•";
+    color: var(--color-gold);
+    font-weight: bold;
+    display: inline-block;
+    width: 1.2em;
+    margin-right: 0.5rem;
+  }
+  
+  /* Samples Section */
+  .samples {
+    background: var(--color-light-taupe);
+  }
+  
+  .samples-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+  }
+  
+  .sample-card {
+    background: white;
+    padding: 2.8rem 2.2rem 2.2rem;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .sample-card::before {
+    content: '"';
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 5rem;
+    color: var(--color-taupe);
+    line-height: 1;
+    opacity: 0.3;
+  }
+  
+  .sample-text {
+    font-style: italic;
+    margin-bottom: 1.8rem;
+    position: relative;
+    z-index: 1;
+    line-height: 1.8;
+    flex-grow: 1;
+  }
+  
+  .sample-author {
+    font-weight: 500;
+    color: var(--color-gold);
+    text-align: right;
+    margin-top: auto;
+  }
+  
+  /* Contact Section */
+  .contact-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 4rem;
+  }
+  
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+  }
+  
+  .contact-info h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-dark);
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+  }
+  
+  .contact-icon {
+    font-size: 1.5rem;
+    color: var(--color-gold);
+    width: 30px;
+    text-align: center;
+  }
+  
+  .contact-form {
+    background: white;
+    padding: 2.8rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  }
+  
+  .form-group {
+    margin-bottom: 1.8rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.7rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-dark);
+    font-weight: 500;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 1.2rem;
+    border: 1px solid var(--color-taupe);
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-gold);
+    box-shadow: 0 0 0 3px rgba(198, 169, 114, 0.2);
+  }
+  
+  .form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+  }
+  
+  /* Certificate Section */
+  .certificate {
+    text-align: center;
+    background: linear-gradient(to right, var(--color-dark), #2a2a2a);
+    color: white;
+    padding: 5rem 0;
+  }
+  
+  .certificate h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    margin-bottom: 1.8rem;
+    color: var(--color-gold);
+  }
+  
+  .certificate p {
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    opacity: 0.9;
+  }
+  
+  /* Footer */
+  footer {
+    background: var(--color-dark);
+    color: white;
+    padding: 4rem 0 2rem;
+  }
+  
+  .footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin-bottom: 3rem;
+  }
+  
+  .footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+    color: var(--color-gold);
+  }
+  
+  .footer-about p {
+    opacity: 0.7;
+    line-height: 1.7;
+  }
+  
+  .footer-links h4 {
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.7rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  
+  .footer-links h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: var(--color-gold);
+  }
+  
+  .footer-links ul {
+    list-style: none;
+  }
+  
+  .footer-links li {
+    margin-bottom: 0.8rem;
+  }
+  
+  .footer-links a {
+    color: var(--color-taupe);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 0.95rem;
+  }
+  
+  .footer-links a:hover {
+    color: var(--color-gold);
+  }
+  
+  .copyright {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+    color: var(--color-dark-taupe);
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 992px) {
+    .hero h1 {
+      font-size: 3rem;
+    }
+    
+    .about-content {
+      flex-direction: column;
+      gap: 3rem;
+    }
+    
+    .about-image {
+      order: -1;
+      margin-bottom: 1.5rem;
+      max-width: 500px;
+      width: 100%;
+    }
+    
+    .contact-content {
+      gap: 3rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .header-content {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+    }
+
+    .logo {
+      font-size: 1.4rem;
+    }
+    
+    .logo-image {
+      height: 1.3em;
+      max-width: 70px;
+    }
+    
+    /* Hide desktop navigation on mobile */
+    nav ul {
+      display: none;
+    }
+    
+    /* Show mobile menu button */
+    .menu-toggle {
+      display: flex;
+    }
+    
+    .hero h1 {
+      font-size: 2.2rem;
+    }
+    
+    .hero p {
+      font-size: 1.1rem;
+    }
+    
+    .hero-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .btn-outline {
+      margin-left: 0;
+    }
+    
+    section {
+      padding: 4rem 0;
+    }
+
+    .section-header {
+      margin-bottom: 3rem;
+    }
+
+    .service-card, 
+    .pricing-card,
+    .sample-card {
+      padding: 2.2rem 1.8rem;
+    }
+
+    .certificate {
+      padding: 4rem 0;
+    }
+    
+    .contact-form {
+      padding: 2.2rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .container {
+      padding: 0 1.5rem;
+    }
+    
+    .logo {
+      font-size: 1.2rem;
+    }
+    
+    .logo-image {
+      max-width: 60px;
+    }
+    
+    .hero h1 {
+      font-size: 2rem;
+    }
+    
+    .hero p {
+      font-size: 1rem;
+    }
+
+    .section-header h2 {
+      font-size: 2rem;
+    }
+
+    .about-image {
+      height: 300px;
+    }
+
+    .services-grid,
+    .pricing-options,
+    .samples-container {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .contact-content {
+      grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      text-align: center;
+    }
+    
+    .footer-links h4::after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+</style>
+</head>
+<body>
+<!-- Header -->
+<header id="header">
+  <div class="container">
+    <div class="header-content">
+      <div class="logo">
+        <img src="logo.png" alt="Логотип" class="logo-image">
+        Биография от Натальи Новиковой
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#about">Обо мне</a></li>
+          <li><a href="#services">Сертификат</a></li>
+          <li><a href="#process">Как это работает</a></li>
+          <li><a href="#samples">Примеры</a></li>
+          <li><a href="#contact">Контакты</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" aria-label="Открыть меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Navigation -->
+<div class="mobile-nav" id="mobile-nav">
+  <button class="close-menu" aria-label="Закрыть меню">×</button>
+  <ul>
+    <li><a href="#about">Обо мне</a></li>
+    <li><a href="#services">Сертификат</a></li>
+    <li><a href="#process">Как это работает</a></li>
+    <li><a href="#samples">Примеры</a></li>
+    <li><a href="#contact">Контакты</a></li>
+  </ul>
+</div>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <h1>Подарите родителям книгу их жизни</h1>
+      <p>Уникальная биография в виде ценной книги — самый душевный подарок на юбилей, день рождения или просто в знак бесконечной благодарности</p>
+      <div class="hero-buttons">
+        <a href="#services" class="btn">Приобрести сертификат</a>
+        <a href="#process" class="btn btn-outline">Как это работает</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about">
+  <div class="container">
+    <div class="section-header">
+      <h2>Обо мне</h2>
+    </div>
+    <div class="about-content">
+      <div class="about-text">
+        <p>Я — Наталья Новикова, профессиональный биограф. Помогаю взрослым детям сохранить бесценные истории их родителей в красивых книгах, которые становятся семейными реликвиями.</p>
+        <p>Моя задача — бережно помочь вам или вашим родным рассказать о своем пути и превратить воспоминания в полноценную книгу, которую ваша семья будет хранить поколениями.</p>
+      </div>
+      <div class="about-image">
+        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80" alt="Профессиональный биограф Наталья Новикова" class="profile-img">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Certificate Section -->
+<section id="services" class="certificate">
+  <div class="container">
+    <h2>Подарочный сертификат на книгу жизни</h2>
+    <p>Идеальный вариант, когда вы хотите сделать по-настоящему ценный и персонализированный подарок. Ваши родные сами смогут выбрать удобное время для бесед и рассказать то, что считают важным.</p>
+    <a href="#contact" class="btn">Заказать сертификат</a>
+  </div>
+</section>
+
+<!-- Process Section -->
+<section id="process" class="services">
+  <div class="container">
+    <div class="section-header">
+      <h2>Как это работает</h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">🎁</div>
+        <h3>Шаг 1: Приобретаете сертификат</h3>
+        <p>Выбираете и оплачиваете сертификат онлайн. Мгновенно получаете красивый PDF-версию для печати или пересылки.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📞</div>
+        <h3>Шаг 2: Родители связываются со мной</h3>
+        <p>Получив сертификат, получатель самостоятельно связывается со мной по email или телефону для активации и планирования встреч.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📖</div>
+        <h3>Шаг 3: Мы создаем книгу вместе</h3>
+        <p>Проводим 3-4 беседы (онлайн), остальное за нами - обрабатываем материал, пишем книгу, форматируем и заказываем изготовление. Через 4-6 недели книга готова.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing Section -->
+<section id="pricing">
+  <div class="container">
+    <div class="section-header">
+      <h2>Стоимость</h2>
+    </div>
+    <div class="pricing-options">
+      <div class="pricing-card">
+        <h3>«Главная история»</h3>
+        <div class="price">70,000₽</div>
+        <ul class="pricing-features">
+          <li>4 часа онлайн-интервью</li>
+          <li>Литературная обработка</li>
+          <li>До 60 страниц готового текста</li>
+          <li>2 этапа правок</li>
+          <li>Электронная версия (PDF)</li>
+          <li>Форматирование для печати</li>
+          <li>Одна книга в кожаном переплете</li>
+        </ul>
+        <a href="#contact" class="btn">Заказать</a>
+      </div>
+      <div class="pricing-card featured">
+        <h3>«История любви»</h3>
+        <div class="price">90,000₽</div>
+        <ul class="pricing-features">
+          <li>5 часов онлайн-интервью</li>
+          <li>Для пары (история отношений)</li>
+          <li>До 80 страниц готового текста</li>
+          <li>2 этапа правок</li>
+          <li>Электронная версия (PDF)</li>
+          <li>Две книги в кожаном переплете</li>
+        </ul>
+        <a href="#contact" class="btn">Заказать</a>
+      </div>
+      <div class="pricing-card">
+        <h3>«Семейная сага»</h3>
+        <div class="price">120,000₽</div>
+        <ul class="pricing-features">
+          <li>8 часов онлайн-интервью</li>
+          <li>История нескольких поколений</li>
+          <li>До 110 страниц готового текста</li>
+          <li>2 этапа правок</li>
+          <li>Электронная версия (PDF)</li>
+          <li>Три книги в подарочном оформлении</li>
+        </ul>
+        <a href="#contact" class="btn">Заказать</a>
+      </div>
+    </div>
+    <p style="text-align: center; margin-top: 2.5rem; color: #666;">Все дополнительные пожелания обсуждаются и оплачиваются отдельно.</p>
+  </div>
+</section>
+
+<!-- Samples Section -->
+<section id="samples" class="samples">
+  <div class="container">
+    <div class="section-header">
+      <h2>Отрывки из биографий</h2>
+    </div>
+    <div class="samples-container">
+      <div class="sample-card">
+        <p class="sample-text">"Папа всегда говорил, что его характер закалился на улицах послевоенного города. Они с друзьями мастерили игрушки из всего, что находили, и эта наука смекалки потом всю жизнь ему помогала в работе и в жизни."</p>
+        <p class="sample-author">— Из воспоминаний о детстве</p>
+      </div>
+      <div class="sample-card">
+        <p class="sample-text">"Мы познакомились на танцах в районном доме культуры. Я сразу заметила этого скромного парня в углу зала, который не решался пригласить ни одну девушку. Тогда я сама подошла к нему и сказала: «Может, станцуем?». Это была самая смелая и лучшая decision моей жизни."</p>
+        <p class="sample-author">— Из истории любви</p>
+      </div>
+      <div class="sample-card">
+        <p class="sample-text">"Мама научила меня главному: дом — это не там, где новая мебель и идеальный ремонт. Дом — это там, где тебя ждут, где пахнет любимым пирогом по субботам и где всегда приберут к твоему приезду, даже если ты приехал внезапно."</p>
+        <p class="sample-author">— Из книги о семейных ценностях</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+  <div class="container">
+    <div class="section-header">
+      <h2>Начните создавать историю</h2>
+    </div>
+    <div class="contact-content">
+      <div class="contact-info">
+        <h3>Свяжитесь со мной</h3>
+        <div class="contact-item">
+          <div class="contact-icon">✉️</div>
+          <div>biographybynovikova@gmail.com</div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📞</div>
+          <div>+7 (923) 671-3597</div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📱</div>
+          <div>Telegram: @biographybynovikova</div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div>Новороссийск, Россия (работаю со всей страной онлайн)</div>
+        </div>
+        <p style="margin-top: 1rem; opacity: 0.8;">Обычно отвечаю на запросы в течение 24 часов. Для обсуждения нестандартных задач свяжитесь со мной до оформления заказа.</p>
+      </div>
+      <div class="contact-form">
+        <form>
+          <div class="form-group">
+            <label for="name">Ваше имя</label>
+            <input type="text" id="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Ваш email</label>
+            <input type="email" id="email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Что вас интересует?</label>
+            <textarea id="message" required></textarea>
+          </div>
+          <button type="submit" class="btn" style="width: 100%;">Отправить сообщение</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-about">
+        <div class="footer-logo">Биография от Натальи Новиковой</div>
+        <p>Сохраняем семейные истории для будущих поколений.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Навигация</h4>
+        <ul>
+          <li><a href="#about">Обо мне</a></li>
+          <li><a href="#services">Сертификат</a></li>
+          <li><a href="#process">Как это работает</a></li>
+          <li><a href="#samples">Примеры</a></li>
+          <li><a href="#contact">Контакты</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Услуги</h4>
+        <ul>
+          <li><a href="#pricing">Главная история</a></li>
+          <li><a href="#pricing">История любви</a></li>
+          <li><a href="#pricing">Семейная сага</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2024 Наталья Новикова | Персональные услуги биографа. Все права защищены.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Header scroll effect
+  window.addEventListener('scroll', function() {
+    const header = document.getElementById('header');
+    if (window.scrollY > 50) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+
+  // Smooth scrolling for navigation links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href');
+      const targetElement = document.querySelector(targetId);
+      
+      if (targetElement) {
+        // Calculate offset based on header height
+        const headerOffset = 80;
+        const elementPosition = targetElement.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+        
+        // Close mobile menu if open
+        document.getElementById('mobile-nav').classList.remove('active');
+      }
+    });
+  });
+
+  // Mobile menu functionality
+  const menuToggle = document.querySelector('.menu-toggle');
+  const closeMenu = document.querySelector('.close-menu');
+  const mobileNav = document.getElementById('mobile-nav');
+
+  menuToggle.addEventListener('click', function() {
+    mobileNav.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+  });
+
+  closeMenu.addEventListener('click', function() {
+    mobileNav.classList.remove('active');
+    document.body.style.overflow = ''; // Re-enable scrolling
+  });
+
+  // Close menu when clicking outside
+  mobileNav.addEventListener('click', function(e) {
+    if (e.target === mobileNav) {
+      mobileNav.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  });
+</script>
+</body>
+</html>
