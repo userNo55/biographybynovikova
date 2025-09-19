@@ -44,7 +44,7 @@
   header {
     background: linear-gradient(to bottom, rgba(26, 26, 26, 0.9), rgba(26, 26, 26, 0.7));
     color: white;
-    padding: 1.2rem 0;
+    padding: 1rem 0;
     position: fixed;
     width: 100%;
     top: 0;
@@ -53,7 +53,7 @@
   }
   
   header.scrolled {
-    padding: 0.8rem 0;
+    padding: 0.6rem 0;
     background: rgba(26, 26, 26, 0.98);
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
   }
@@ -67,28 +67,30 @@
   .logo {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     font-weight: 600;
     color: var(--color-gold);
     line-height: 1.2;
+    z-index: 1001;
   }
   
   .logo-image {
-    height: 1.4em; /* Relative to font size */
+    height: 1.8em;
     width: auto;
-    max-width: 100px;
+    max-width: 80px;
     object-fit: contain;
   }
   
-  nav ul {
+  /* Desktop Navigation */
+  .desktop-nav ul {
     display: flex;
     list-style: none;
     gap: 1.8rem;
   }
   
-  nav a {
+  .desktop-nav a {
     color: white;
     text-decoration: none;
     font-size: 0.9rem;
@@ -98,35 +100,51 @@
     font-weight: 400;
   }
   
-  nav a:hover {
+  .desktop-nav a:hover {
     color: var(--color-gold);
   }
 
-  /* Mobile menu button */
-  .menu-toggle {
+  /* Mobile Navigation */
+  .mobile-nav-toggle {
     display: none;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 30px;
-    height: 25px;
     background: transparent;
     border: none;
     cursor: pointer;
-    padding: 0;
-    z-index: 10;
-  }
-  
-  .menu-toggle span {
     width: 30px;
-    height: 3px;
-    background: var(--color-gold);
-    border-radius: 5px;
-    transition: all 0.3s linear;
+    height: 25px;
     position: relative;
-    transform-origin: 1px;
+    z-index: 1001;
   }
   
-  /* Mobile navigation */
+  .mobile-nav-toggle span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: var(--color-gold);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+  }
+  
+  .mobile-nav-toggle span:nth-child(1) {
+    transform: translateY(-8px);
+  }
+  
+  .mobile-nav-toggle span:nth-child(3) {
+    transform: translateY(8px);
+  }
+  
+  .mobile-nav-toggle.active span:nth-child(1) {
+    transform: translateY(0) rotate(45deg);
+  }
+  
+  .mobile-nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .mobile-nav-toggle.active span:nth-child(3) {
+    transform: translateY(-3px) rotate(-45deg);
+  }
+  
   .mobile-nav {
     position: fixed;
     top: 0;
@@ -170,17 +188,6 @@
     color: var(--color-gold);
   }
   
-  .close-menu {
-    position: absolute;
-    top: 25px;
-    right: 25px;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 2rem;
-    cursor: pointer;
-  }
-  
   /* Hero Section */
   .hero {
     height: 100vh;
@@ -203,7 +210,7 @@
   .hero h1 {
     font-family: 'Cormorant Garamond', serif;
     font-size: 3.5rem;
-    font-weight: 700; /* Changed from 300 to 700 */
+    font-weight: 700;
     margin-bottom: 1.5rem;
     line-height: 1.3;
   }
@@ -211,7 +218,7 @@
   .hero p {
     font-size: 1.2rem;
     margin-bottom: 2.5rem;
-    font-weight: 400; /* Changed from 300 to 600 */
+    font-weight: 400;
     opacity: 1;
   }
   
@@ -239,7 +246,7 @@
   }
   
  .btn-outline {
-    background: rgba(0, 0, 0, 0.4); /* Dark semi-transparent instead of white */
+    background: rgba(0, 0, 0, 0.4);
     border: 2px solid var(--color-gold);
     color: var(--color-gold);
     margin-left: 1rem;
@@ -698,26 +705,31 @@
     .header-content {
       flex-direction: row;
       justify-content: space-between;
-      text-align: left;
     }
 
     .logo {
-      font-size: 1.4rem;
+      font-size: 1.2rem;
     }
     
     .logo-image {
-      height: 1.3em;
+      height: 1.6em;
       max-width: 70px;
     }
     
     /* Hide desktop navigation on mobile */
-    nav ul {
+    .desktop-nav {
       display: none;
     }
     
     /* Show mobile menu button */
-    .menu-toggle {
+    .mobile-nav-toggle {
       display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    
+    .hero {
+      padding-top: 70px;
     }
     
     .hero h1 {
@@ -767,7 +779,7 @@
     }
     
     .logo {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
     }
     
     .logo-image {
@@ -812,6 +824,16 @@
       transform: translateX(-50%);
     }
   }
+
+  @media (max-width: 400px) {
+    .logo {
+      font-size: 1rem;
+    }
+    
+    .logo-image {
+      max-width: 50px;
+    }
+  }
 </style>
 </head>
 <body>
@@ -821,9 +843,9 @@
     <div class="header-content">
       <div class="logo">
         <img src="logo.png" alt="Логотип" class="logo-image">
-        Биография от Натальи Новиковой
+        <span>Биография от Натальи Новиковой</span>
       </div>
-      <nav>
+      <nav class="desktop-nav">
         <ul>
           <li><a href="#about">Обо мне</a></li>
           <li><a href="#services">Сертификат</a></li>
@@ -832,7 +854,7 @@
           <li><a href="#contact">Контакты</a></li>
         </ul>
       </nav>
-      <button class="menu-toggle" aria-label="Открыть меню">
+      <button class="mobile-nav-toggle" aria-label="Открыть меню">
         <span></span>
         <span></span>
         <span></span>
@@ -842,8 +864,7 @@
 </header>
 
 <!-- Mobile Navigation -->
-<div class="mobile-nav" id="mobile-nav">
-  <button class="close-menu" aria-label="Закрыть меню">×</button>
+<nav class="mobile-nav" id="mobile-nav">
   <ul>
     <li><a href="#about">Обо мне</a></li>
     <li><a href="#services">Сертификат</a></li>
@@ -851,7 +872,7 @@
     <li><a href="#samples">Примеры</a></li>
     <li><a href="#contact">Контакты</a></li>
   </ul>
-</div>
+</nav>
 
 <!-- Hero Section -->
 <section class="hero">
@@ -1065,7 +1086,7 @@
         <h4>Услуги</h4>
         <ul>
           <li><a href="#pricing">Главная история</a></li>
-          <li><a href="#pricing">История любви</a></li>
+          <li><a href#pricing">История любви</a></li>
           <li><a href="#pricing">Семейная сага</a></li>
         </ul>
       </div>
@@ -1087,6 +1108,22 @@
     }
   });
 
+  // Mobile menu functionality
+  const menuToggle = document.querySelector('.mobile-nav-toggle');
+  const mobileNav = document.getElementById('mobile-nav');
+
+  menuToggle.addEventListener('click', function() {
+    this.classList.toggle('active');
+    mobileNav.classList.toggle('active');
+    
+    // Prevent scrolling when menu is open
+    if (mobileNav.classList.contains('active')) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+  });
+
   // Smooth scrolling for navigation links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -1095,6 +1132,13 @@
       const targetElement = document.querySelector(targetId);
       
       if (targetElement) {
+        // Close mobile menu if open
+        if (mobileNav.classList.contains('active')) {
+          mobileNav.classList.remove('active');
+          menuToggle.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+        
         // Calculate offset based on header height
         const headerOffset = 80;
         const elementPosition = targetElement.getBoundingClientRect().top;
@@ -1104,32 +1148,17 @@
           top: offsetPosition,
           behavior: 'smooth'
         });
-        
-        // Close mobile menu if open
-        document.getElementById('mobile-nav').classList.remove('active');
       }
     });
   });
 
-  // Mobile menu functionality
-  const menuToggle = document.querySelector('.menu-toggle');
-  const closeMenu = document.querySelector('.close-menu');
-  const mobileNav = document.getElementById('mobile-nav');
-
-  menuToggle.addEventListener('click', function() {
-    mobileNav.classList.add('active');
-    document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
-  });
-
-  closeMenu.addEventListener('click', function() {
-    mobileNav.classList.remove('active');
-    document.body.style.overflow = ''; // Re-enable scrolling
-  });
-
   // Close menu when clicking outside
-  mobileNav.addEventListener('click', function(e) {
-    if (e.target === mobileNav) {
+  document.addEventListener('click', function(e) {
+    if (mobileNav.classList.contains('active') && 
+        !e.target.closest('.mobile-nav') && 
+        !e.target.closest('.mobile-nav-toggle')) {
       mobileNav.classList.remove('active');
+      menuToggle.classList.remove('active');
       document.body.style.overflow = '';
     }
   });
