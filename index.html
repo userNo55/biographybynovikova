@@ -711,53 +711,59 @@
   /* Responsive Styles */
   @media (max-width: 768px) {
     .header-content {
-      flex-direction: row;
-      justify-content: space-between;
+        flex-direction: row;
+        justify-content: space-between;
     }
 
     .logo {
-      font-size: 1.1rem;
+        font-size: 1.1rem;
     }
     
     .logo-image {
-      height: 1.4em;
-      max-width: 60px;
+        height: 1.4em;
+        max-width: 60px;
     }
     
     .desktop-nav {
-      display: none;
+        display: none;
     }
     
     .mobile-nav-toggle {
-      display: flex;
+        display: flex;
     }
     
     section {
-      padding: 70px 0 30px;
+        padding: 70px 0 30px;
     }
 
     .about-content {
-      flex-direction: column;
-      gap: 2rem;
+        flex-direction: column;
+        gap: 2rem;
     }
     
     .about-image {
-      order: -1;
-      margin-bottom: 1rem;
-      max-width: 400px;
-      width: 100%;
+        order: -1;
+        margin-bottom: 1rem;
+        max-width: 400px;
+        width: 100%;
     }
     
     .hero h1 {
-      font-size: 2rem;
+        font-size: 2rem;
     }
     
     .hero-buttons {
-      flex-direction: column;
-      align-items: center;
-      gap: 0.8rem;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
     }
-  }
+
+    .pricing-options,
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
 </style>
 </head>
 <body>
